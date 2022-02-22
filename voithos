@@ -8,9 +8,9 @@ main() {
     *)
       echo "Preparing for installation of $VOITHOS_INSTALL"
   esac
-  https://aur.archlinux.org/$VOITHOS_INSTALL.git
+  git clone https://aur.archlinux.org/$VOITHOS_INSTALL.git
   cd ./$VOITHOS_INSTALL/
-  /usr/bin/makepkg -si
+  /usr/bin/makepkg -sri
   echo -e "\e[1;35mFinished installing "$VOITHOS_INSTALL
   echo "If you would like to remove the package, this is not available in the current version."
   echo "This option will soon be available in future updates."
