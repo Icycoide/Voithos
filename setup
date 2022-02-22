@@ -2,7 +2,8 @@
 main() {
   echo "Setting up Voithos..."
   cd /usr/local/bin/
-  sudo wget https://icycoide.github.io/Voithos/voithos
+  sudo wget https://icycoide.github.io/Voithos/voithos.git
+  sudo chmod +x ./voithos
   cd $HOME && mkdir $HOME/.voithos-caching
 }
 
