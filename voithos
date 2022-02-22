@@ -17,3 +17,5 @@ main() {
   echo "Please go to the git repository of Voithos, run git pull and run setup to update Voithos."
   exit
 }
+
+main
