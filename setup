@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+main() {
+  echo "Setting up Voithos..."
+  cd /bin/
+  sudo wget https://icycoide.github.io/Voithos/voithos
+  cd $HOME && mkdir $HOME/.voithos-caching
+}
