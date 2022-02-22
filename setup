@@ -5,3 +5,5 @@ main() {
   sudo wget https://icycoide.github.io/Voithos/voithos
   cd $HOME && mkdir $HOME/.voithos-caching
 }
+
+main
