@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-main() {
+voi.setup.install() {
   echo "Setting up Voithos in $voi_setup_directory..."
   case "$voi_setup_directory" in
     "")
