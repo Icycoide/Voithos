@@ -1,10 +1,21 @@
 #!/usr/bin/env bash
 main() {
-  echo "Setting up Voithos..."
-  cd /usr/local/bin/
+  echo "Setting up Voithos in $voi_setup_directory..."
+  case "$voi_setup_directory" in
+    "")
+      voi_setup_directory='/usr/local/bin'
+    ;;
+  esac
+  cd "$voi_setup_directory"
   sudo wget https://icycoide.github.io/Voithos/voithos.git
   sudo chmod +x ./voithos
   cd $HOME && mkdir $HOME/.voithos-caching
+  # experimental
+  echo "alias 'voithos'='$voi_setup_directory/voithos'" >> "$HOME/.bashrc"
+  echo "alias 'aur'='voithos'" >> "$HOME/.bashrc"
+
+  echo "Setup complete!"
 }
 
-main
+read -p 'Voithos install directory (leave blank for /usr/local/bin)' voi_setup_directory
+voi.setup.install
