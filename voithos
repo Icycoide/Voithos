@@ -11,9 +11,8 @@ main() {
   git clone https://aur.archlinux.org/$VOITHOS_INSTALL.git
   cd ./$VOITHOS_INSTALL/
   /usr/bin/makepkg -sri
-  echo -e "\e[1;35mFinished installing "$VOITHOS_INSTALL
-  echo "If you would like to remove the package, this is not available in the current version."
-  echo "This option will soon be available in future updates."
+  echo -e "\e[1;35mFinished executing the installation of "$VOITHOS_INSTALL
+  echo "If you would like to remove the package, do so using pacman"
   echo "Please go to the git repository of Voithos, run git pull and run setup to update Voithos."
   exit
 }
